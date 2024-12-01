@@ -7,10 +7,8 @@ int main()
     std::ifstream file("../input_01.txt");
     std::vector<int> first_list, second_list;
     std::map<int, int> counter;
-    while(!file.eof()) {
-        int a,b;
-        file >> a >> b;
-        if(file.eof()) break;
+    int a,b;
+    while(file >> a >> b) {
         first_list.push_back(a);
         second_list.push_back(b);
         counter[b]++;
@@ -26,6 +24,6 @@ int main()
     }
 
     std::cout << "The total difference is " << difference << std::endl;
-    std::cout << "The similarity scodre is " << similarity << std::endl;
+    std::cout << "The similarity score is " << similarity << std::endl;
     return 0;
 }
