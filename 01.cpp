@@ -1,6 +1,8 @@
-#include <iostream>
+#include <algorithm>
 #include <fstream>
+#include <iostream>
 #include <map>
+#include <vector>
 
 int main()
 {
@@ -13,8 +15,8 @@ int main()
         second_list.push_back(b);
         counter[b]++;
     }
-    std::sort(first_list.begin(), first_list.end());
-    std::sort(second_list.begin(), second_list.end());
+    std::ranges::sort(first_list);
+    std::ranges::sort(second_list);
 
     size_t difference = 0;
     size_t similarity = 0;
