@@ -23,8 +23,8 @@ int main() {
       operands.push_back(std::stoll(word));
     }
 
-    // using the bit values of an int as operators
-    // bit set is multiplication, bit unset is addition
+    // using the pairs of bit values of an int as operators
+    // 00 = addition, 01 = multiplication, 02 = concatenation, 03 = undefined/skip
     for (size_t ops = 0;; ops++) {
       int64_t result = operands[0];
       int next_operand = 1;
